@@ -1,1 +1,2 @@
-#! /bin/bash\r\n yum install git
+#! /bin/bash
+yum install git -y
