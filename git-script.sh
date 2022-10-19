@@ -1,2 +1,2 @@
 #! /bin/bash
-yum install git -y
+yum -y install git wget
