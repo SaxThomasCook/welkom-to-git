@@ -15,7 +15,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                ./git-script.sh
             }
         }
     }
