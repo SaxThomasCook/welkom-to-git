@@ -6,4 +6,3 @@ yum -y install docker
 yum -y install apache2
 yum -y install docker-compose
 yum -y install telnet
-yum -y install epel-release
