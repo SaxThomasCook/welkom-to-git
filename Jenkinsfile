@@ -5,6 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building.. !!!'
+                pwd
+                npm install
             }
         }
         stage('Test') {
