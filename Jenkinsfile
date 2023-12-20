@@ -4,20 +4,27 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Building.. !!!"
-                sh "pwd"
-                sh "npm --version"
+                script {
+                    echo "Building.. !!!"
+                    sh "pwd"
+                    sh "npm --version"
+                }
             }
         }
         stage('Test') {
             steps {
-                echo "Testing...."
-                sh "npm test"
+                script {
+                    echo "Testing...."
+                    sh "npm test"
+                }
             }
         }
         stage('Deploy') {
             steps {
-                echo "Deploying...."
+                script {
+                    echo "Deploying...."
+            
+                }
             }
         }
     }
