@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                     echo "Building.. !!!"
-                    sh "pwd"
-                    sh "npm --version"
+                    git-bash "pwd"
+                    git-bash "npm --version"
             }
         }
         stage('Test') {
             steps {
                     echo "Testing...."
-                    sh "npm test"
+                    git-bash "npm test"
             }
         }
         stage('Deploy') {
