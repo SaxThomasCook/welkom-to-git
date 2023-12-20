@@ -4,19 +4,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building.. !!!'
-                bash pwd
-                bash npm --version
+                echo "Building.. !!!"
+                sh "pwd"
+                sh "npm --version"
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo "Testing...."
+                sh "npm test"
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo "Deploying...."
             }
         }
     }
