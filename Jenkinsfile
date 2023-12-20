@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building.. !!!'
-                sh pwd
-                sh npm --version
+                //sh pwd
+                //sh npm --version
             }
         }
         stage('Test') {
