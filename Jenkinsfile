@@ -8,19 +8,27 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Building.. !!!'
-                pwd
-                npm install
+                    echo "Building... !!!"
+                    sh "npm --version"
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                    echo "Testing...."
+                    sh "npm test"
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                script {
+                    echo "Deploying...."
+                    Boolean bool = fileExists 'git-script.sh'
+                    if (bool) {
+                        println "The File git-script.sh exists :)"
+                    } else {
+                        println "The File git-script.sh does not exist :("
+                    }  
+                }
             }
         }
     }
