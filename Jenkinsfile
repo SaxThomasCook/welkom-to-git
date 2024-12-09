@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("Checkout") {
             steps {
-                echo "Checkout code.."
+                echo "Checkout code..!"
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-username-jenkins', url: 'https://github.com/SaxThomasCook/welkom-to-git.git']]])
             }
         }
