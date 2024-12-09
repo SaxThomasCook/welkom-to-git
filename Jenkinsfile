@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                script {
+                //script {
                     echo "Deploying...."
                     //Boolean bool = fileExists 'git-script.sh'
                     //if (bool) {
@@ -30,7 +30,7 @@ pipeline {
                     //} else {
                     //    println "The File git-script.sh does not exist :("
                     //}  
-                }
+                //}
             }
         }
     }
