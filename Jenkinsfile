@@ -1,37 +1,12 @@
-pipeline {
-    agent any
+node {
+	stage 'Checkout'
+		checkout scm
 
-    stages {
-        stage("Checkout") {
-            steps {
-                echo "Checkout code..!"
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-username-jenkins', url: 'https://github.com/SaxThomasCook/welkom-to-git.git']]])
-            }
-        }
-        stage('Build') {
-            steps {
-                echo "Building... !!!"
-                    //sh "npm --version"
-            }
-        }
-        stage('Test') {
-            steps {
-                echo "Testing...."
-                    //sh "npm test"
-            }
-        }
-        stage('Deploy') {
-            steps {
-                //script {
-                    echo "Deploying...."
-                    //Boolean bool = fileExists 'git-script.sh'
-                    //if (bool) {
-                    //    println "The File git-script.sh exists :)"
-                    //} else {
-                    //    println "The File git-script.sh does not exist :("
-                    //}  
-                //}
-            }
-        }
-    }
+	stage 'Build'
+		bat 'nuget restore SolutionName.sln'
+		bat "\"${tool 'MSBuild'}\" SolutionName.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+
+	stage 'Archive'
+		archive 'ProjectName/bin/Release/**'
+
 }
