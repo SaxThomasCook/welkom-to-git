@@ -5,7 +5,7 @@ node {
 
 	stage 'Build'
 		echo "Build"
-		bat "dotnet publish ${workspace}\\frontend\\frontend.csproj -c Release -o ${workspace}\\out"
+		bat "dotnet publish ${workspace}\\frontend\\frontend.csproj -c Release -o out"
 		
 	stage 'Test'
 		echo "Test"
