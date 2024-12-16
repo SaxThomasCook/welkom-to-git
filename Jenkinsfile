@@ -5,9 +5,9 @@ node {
 
 	stage 'Build'
 		echo "Build"
-		bat ".\frontend\dotnet publish -c Release -o out"
+		bat "dotnet publish %WORKSPACE%/frontend/frontend.csproj" -c Release -o %WORKSPACE%/out"
 		
 	stage 'Test'
 		echo "Test"
-		bat ".\frontend\dir"
+		bat "dir frontend"
 }
