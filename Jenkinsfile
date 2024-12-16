@@ -1,13 +1,14 @@
 node {
-	stage 'Checkout'
+	stage 'Checkout' {
         echo "test"
 		checkout scm
-
-	stage 'Build'
+	}
+	stage 'Build' {
 		echo "Build"
 		bat "dotnet publish \"${workspace}\\frontend\\frontend.csproj\" -c Release -o out"
-		
-	stage 'Test'
+	}	
+	stage 'Test' {
 		echo "Test"
-		bat "dir frontend"
+		bat "dir out"
+	}
 }
