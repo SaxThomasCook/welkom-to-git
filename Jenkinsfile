@@ -18,7 +18,7 @@ pipeline {
 				echo "Test"
 				bat "dir out"
 				snykSecurity(
-					snykInstallation: 'SaxThomasCook',
+					snykInstallation: 'ThomasCook',
 					snykTokenId: 'eb6592c2-cede-4f02-886f-8c8690d23a86'
 				)
 			}
