@@ -19,7 +19,7 @@ pipeline {
 				bat "dir out"
 				snykSecurity(
 					snykInstallation: 'ThomasCook',
-					snykTokenId: 'eb6592c2-cede-4f02-886f-8c8690d23a86'
+					snykTokenId: '270ef8b4-c9a3-4e49-8946-8c45407cc8f0'
 				)
 			}
 		}
