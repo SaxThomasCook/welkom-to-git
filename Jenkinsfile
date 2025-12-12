@@ -17,7 +17,8 @@ pipeline {
 			steps {
 				echo "Test"
 				bat "dir out"
-				println("Getting environment:${environment}")
+				println("Git URL:${GIT_URL}")
+				println("Git BRANCH:${GIT_BRANCH}")
 			}
 		}
 	}
