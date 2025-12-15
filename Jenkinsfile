@@ -17,10 +17,8 @@ pipeline {
 			steps {
 				echo "Test"
 				bat "dir out"
-				snykSecurity(
-					snykInstallation: 'ThomasCook',
-					snykTokenId: '270ef8b4-c9a3-4e49-8946-8c45407cc8f0'
-				)
+				println("Git URL:${GIT_URL}")
+				println("Git BRANCH:${GIT_BRANCH}")
 			}
 		}
 	}
