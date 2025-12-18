@@ -26,8 +26,8 @@ pipeline {
 				echo "SnykLearn"
 
 				snykSecurity(
-          			snykInstallation: '77aeaf09-4394-4e36-b926-2bd802ccd1e0',
-          			snykTokenId: 'SnykLearn',
+          			snykInstallation: 'SnykLearn',
+          			snykTokenId: '77aeaf09-4394-4e36-b926-2bd802ccd1e0',
         		)
 
 			}
