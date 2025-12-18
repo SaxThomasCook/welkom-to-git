@@ -16,8 +16,6 @@ pipeline {
 		stage ('Test') {
 			steps {
 				echo "Test"
-				bat "cd out"
-				println("Workspace folder: ${workspace}")
 				bat "dir"
 				println("Git URL:${GIT_URL}")
 				println("Git BRANCH:${GIT_BRANCH}")
@@ -25,12 +23,13 @@ pipeline {
 				echo "Find your Snyk API Key in menu under your personal account settings: https://app.snyk.io/account"
 				echo "Store your Snyk Installation name at Jenkins Tools page and name it snyk-teach-tbm" 
 				echo "Store your API Key at the Jenkins Credentials page under Token Id SnykLearn"
-
-				snykSecurity(
-          			snykInstallation: 'snyk-teach-tbm',
-          			snykTokenId: 'SnykLearn',
-        		)
-
+				dir {
+					bat "dir"
+					snykSecurity(
+						snykInstallation: 'snyk-teach-tbm',
+						snykTokenId: 'SnykLearn',
+					)
+				}
 			}
 		}
 	}
