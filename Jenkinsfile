@@ -16,7 +16,9 @@ pipeline {
 		stage ('Test') {
 			steps {
 				echo "Test"
-				bat "dir out"
+				bat "cd out"
+				println("Workspace folder: ${workspace}")
+				bat "dir"
 				println("Git URL:${GIT_URL}")
 				println("Git BRANCH:${GIT_BRANCH}")
 				echo "Snyk Test"
