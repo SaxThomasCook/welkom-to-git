@@ -23,8 +23,8 @@ pipeline {
 				echo "Find your Snyk API Key in menu under your personal account settings: https://app.snyk.io/account"
 				echo "Store your Snyk Installation name at Jenkins Tools page and name it snyk-teach-tbm" 
 				echo "Store your API Key at the Jenkins Credentials page under Token Id SnykLearn"
-				dir("out") {
-				dir("${env.WORKSPACE}/out") {
+				echo "Change current working folder to select folder to scan"
+				dir("${env.WORKSPACE}/out") { 
 					bat "dir"
 					snykSecurity(
 						snykInstallation: 'snyk-teach-tbm',
