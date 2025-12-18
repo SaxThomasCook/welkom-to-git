@@ -21,13 +21,12 @@ pipeline {
 				println("Git BRANCH:${GIT_BRANCH}")
 				echo "Snyk Test"
 				echo "Find your Snyk API Key in menu under your personal account settings: https://app.snyk.io/account"
-				echo "77aeaf09-4394-4e36-b926-2bd802ccd1e0"
-				echo "Choose your Snyk Installation during the configuration of your API Key at the Jenkins Credentials page."
-				echo "SnykLearn"
+				echo "Store your Snyk Installation name at Jenkins Tools page and name it snyk-teach-tbm" 
+				echo "Store your API Key at the Jenkins Credentials page under Token Id SnykLearn"
 
 				snykSecurity(
           			snykInstallation: 'snyk-teach-tbm',
-          			snykTokenId: '77aeaf09-4394-4e36-b926-2bd802ccd1e0',
+          			snykTokenId: 'SnykLearn',
         		)
 
 			}
