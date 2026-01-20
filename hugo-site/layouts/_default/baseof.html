@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; background-color: #009c81; }
+        ul { margin-left: 1.5rem; line-height: 1.4; }
+        li { margin-bottom: 0.2rem; }
+    </style>
+</head>
+<body>
+    {{ block "main" . }}{{ end }}
+</body>
+</html>

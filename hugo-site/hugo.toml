@@ -1,0 +1,9 @@
+baseURL = 'https://saxthomasook.github.io/welkom-to-git/'
+languageCode = 'nl-nl'
+title = 'Technisch Beheer & Monitoring'
+
+# Disable unnecessary features for simple static site
+disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
+
+[params]
+  description = "Information about ITIL, DevOps, CI/CD and Monitoring"
