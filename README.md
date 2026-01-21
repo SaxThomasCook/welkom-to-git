@@ -11,3 +11,11 @@ Practice repository for Git, Jenkins, Docker and Hugo
 cd hugo-site
 hugo server  # Run Hugo site at localhost:1313
 ```
+
+**Output:**
+```
+Start building sites …
+Built in 14 ms
+Web Server is available at http://localhost:1313/welcome-to-git/
+Press Ctrl+C to stop
+```
