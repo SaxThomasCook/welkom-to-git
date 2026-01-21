@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div style="padding: 3rem; min-height: 100vh;">
+    <section>
+        <aside style="float: right; margin-left: 3rem;">
+            <img src="{{ "images/banner.avif" | relURL }}" alt="TBM Banner" style="max-width: 400px; height: auto;">
+        </aside>
+        <h1 style="font-size:xxx-large; color:white; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-bottom: 2rem; line-height: 1.2;">
+            {{ .Title }}
+        </h1>
+        <div style="font-size:x-large; color:white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-bottom: 3rem;">
+            {{ .Content }}
+        </div>
+        <div style="clear: both; padding-top: 2rem;">
+            <a href="https://www.saxion.edu" target="_blank" rel="noopener noreferrer">
+                <img src="{{ "images/saxion-logo.svg" | relURL }}" alt="Saxion Logo" style="display: block; max-width: 300px;">
+            </a>
+        </div>
+    </section>
+</div>
+{{ end }}
