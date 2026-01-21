@@ -6,7 +6,7 @@ Practice repository for Git, Jenkins, Docker and Hugo
 - **Jenkins** - CI/CD pipeline (builds Hugo site + Snyk security scan)
 - **Docker** - Container support via git-script.sh
 
-## Quick start
+## Quick build
 ```bash
 cd hugo-site
 hugo server  # Run Hugo site at localhost:1313
